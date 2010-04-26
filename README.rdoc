@@ -1,4 +1,4 @@
-##:section:Vtiger Delivery Notes
+## :section: Vtiger Delivery Notes
 #A vtiger module for creating delivery notes.  Delivery notes or delivery orders are documents which the customer signs to acknowledge delivery of the product.
 #The delivery order is driven from the linked invoice.  A comma separated list of products can be chosen. This allows you to add have a delivery order for just some of the products or all of the products.
 
@@ -6,7 +6,7 @@
 
 
 
-#:section:Installation
+# :section: Installation
 unzip the entire directory in your vtiger site.
 Then click the link  http://vtigerurl/vtlib.Test.html
 Click on the install link to install the module
