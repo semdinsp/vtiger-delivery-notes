@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_deliverynote</name>
+			<sql><![CDATA[CREATE TABLE vtiger_deliverynote(deliverynoteid INT)]]></sql>
+		</table>
+		<table>
+			<name>vtiger_deliverynotecf</name>
+			<sql><![CDATA[CREATE TABLE vtiger_deliverynotecf(deliverynoteid INT NOT NULL PRIMARY KEY)]]></sql>
+		</table>
+		<table>
+			<name>vtiger_deliverynotegrouprel</name>
+			<sql><![CDATA[CREATE TABLE vtiger_deliverynotegrouprel(deliverynoteid INT NOT NULL PRIMARY KEY, groupname VARCHAR(100))]]></sql>
+		</table>
+	</tables>
+</schema>
