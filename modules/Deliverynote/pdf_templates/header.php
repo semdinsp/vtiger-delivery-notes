@@ -38,7 +38,7 @@ $soBubble=array("168","17","12");
 $pdf->addBubbleBlock($so_name, $app_strings["Job Number"], $soBubble);
 
 $poBubble=array("114","17","12");
-$pdf->addBubbleBlock($po_name, $app_strings["Delivery Order"], $poBubble);
+$pdf->addBubbleBlock($po_name, $mod_strings["Delivery Order"], $poBubble);
 
 // page number
 $pageBubble=array("147","17",0);
@@ -59,7 +59,7 @@ if(trim($ship_state)!='' || trim($ship_code)!= '')
 
 	$shipText .=$ship_country;
 
-$pdf->addTextBlock( $app_strings["Shipping Address"].":", $shipText, $shipLocation );
+$pdf->addTextBlock( $mod_strings["Shipping Address"].":", $shipText, $shipLocation );
 
 // billing Address
 $billPositions = array("10","51","61");
@@ -71,19 +71,19 @@ if(trim($bill_state)!='' || trim($bill_code)!= '')
 	$billText .= $bill_state." ".$bill_code."\n";
 
 	$billText .=$bill_country;
-$pdf->addTextBlock($app_strings["Billing Address"].":",$billText, $billPositions);
+// scott $pdf->addTextBlock($app_strings["Billing Address"].":",$billText, $billPositions);
 // ********** End Addresses ******************
 
 
 
 /*  ******** Begin Invoice Data ************************ */ 
 // terms block
-$termBlock=array("10","67");
+$termBlock=array("10","47");
 $pdf->addRecBlock($account_name, $app_strings["Customer Name"], $termBlock);
 
 // issue date block
 $issueBlock=array("80","37");
-$pdf->addRecBlock(getDisplayDate(date("Y-m-d")), $app_strings["Issue Date"],$issueBlock);
+$pdf->addRecBlock(getDisplayDate(date("Y-m-d")), $mod_strings["Issue Date"],$issueBlock);
 
 // due date block
 //scott $dueBlock=array("81","52");

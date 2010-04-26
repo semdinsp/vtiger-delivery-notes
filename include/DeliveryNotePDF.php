@@ -18,8 +18,8 @@ function get_do_pdf() {
 	require_once('include/database/PearDatabase.php');
 	require_once('modules/Deliverynote/Deliverynote.php');
 	require_once('modules/Invoice/Invoice.php');
-	
-	global $adb,$app_strings,$current_user;
+	require_once('modules/Deliverynote/language/en_us.lang.php');
+	global $adb,$app_strings,$current_user, $mod_strings;
 
 	
 	// would you like and end page?  1 for yes 0 for no
@@ -309,13 +309,13 @@ function get_do_pdf() {
 	
 		$page_num++;
 	
-		if (($endpage) && ($lastpage))
-		{
-			$pdf->AddPage();
-			include("modules/Deliverynote/pdf_templates/header.php");
-			include("modules/Deliverynote/pdf_templates/lastpage/body.php");
-			include("modules/Deliverynote/pdf_templates/lastpage/footer.php");
-		}
+	//scott last page remove:	if (($endpage) && ($lastpage))
+		//scott last page remove:	{
+		//scott last page remove:		$pdf->AddPage();
+		//scott last page remove:		include("modules/Deliverynote/pdf_templates/header.php");
+		//scott last page remove:		include("modules/Deliverynote/pdf_templates/lastpage/body.php");
+		//scott last page remove:		include("modules/Deliverynote/pdf_templates/lastpage/footer.php");
+		//scott last page remove:	}
 	}	
 	return $pdf;
 }

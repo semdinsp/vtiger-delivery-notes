@@ -18,6 +18,10 @@ $mod_strings = Array (
 'DeliverynoteName' => 'Delivery Order Name',
 'Delivery Order' => 'Delivery Order',
 'Job Number' => 'Job Number',
+'Issue Date' => 'Date',
+'Shipping Address' => 'Customer Address',
+'Description' => 'Remarks',
+'DOStamp' => 'Goods Received in good order and condition.'
 );
 
 ?>

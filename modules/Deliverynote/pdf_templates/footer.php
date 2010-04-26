@@ -19,7 +19,7 @@ $num=230;
 
 /* **************** Begin Description ****************** */
 $descBlock=array("10",$top,"53", $num);
-$pdf->addDescBlock($description, $app_strings["Description"], $descBlock);
+$pdf->addDescBlock($description, $mod_strings["Description"], $descBlock);
 
 /* ************** End Description *********************** */
 
@@ -28,7 +28,7 @@ $pdf->addDescBlock($description, $app_strings["Description"], $descBlock);
 /* **************** Begin Terms ****************** */
 $stampBlock=array("107",$top,"53", $num);
 //scott $pdf->addDescBlock($conditions, $app_strings["DOTerms"], $termBlock);
-$pdf->addDescBlock("Company Stamp", $app_strings["DOStamp"], $stampBlock);
+$pdf->addDescBlock("Chop with company stamp and sign here:", $mod_strings["DOStamp"], $stampBlock);
 
 /* ************** End Terms *********************** */
 
