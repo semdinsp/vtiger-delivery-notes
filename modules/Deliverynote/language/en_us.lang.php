@@ -8,15 +8,16 @@
  * All Rights Reserved.
  *************************************************************************************/
 $mod_strings = Array (
-'Deliverynote' => 'Delivery Order',
-'SINGLE_Deliverynote'=>'Delivery Order',
-'LBL_DELIVERY_INFORMATION' => 'Delivery Order Information',
+'Deliverynote' => 'Delivery Note',
+'SINGLE_Deliverynote'=>'Delivery Note',
+'LBL_DELIVERY_INFORMATION' => 'Delivery Note Information',
 'LBL_CUSTOM_INFORMATION' => 'Custom Information',
 'Assigned To' => 'Assigned To',
 'Created Time' => 'Created Time',
 'Modified Time' => 'Modified Time',
-'DeliverynoteName' => 'Delivery Order Name',
-'Delivery Order' => 'Delivery Order',
+'DeliverynoteName' => 'Delivery Note Name',
+'Delivery Order' => 'Delivery Note',
+'Customer Ref' => 'Your Reference',
 'Job Number' => 'Job Number',
 'Issue Date' => 'Date',
 'Shipping Address' => 'Customer Address',

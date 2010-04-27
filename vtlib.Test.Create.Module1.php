@@ -67,7 +67,6 @@ $field2->setPicklistValues( Array ('Sent', 'Delivered','Accepted') );
 
 
 $field3 = new Vtiger_Field();
-$field3 = new Vtiger_Field();
 $field3->name = 'ProductList';
 $field3->table = 'vtiger_deliverynote';
 $field3->column = 'productlist';
@@ -86,8 +85,8 @@ $field4->uitype = 10;
 $field4->typeofdata = 'V~M';
 $field4->helpinfo = 'Related to an existing invoice';
 $block1->addField($field4);
-$field4->setRelatedModules(Array('Invoice'));
-
+$field4->setRelatedModules(Array('SalesOrder'));
+/** Invoice */
 /** Common fields that should be in every module, linked to vtiger CRM core table */
 $field5 = new Vtiger_Field();
 $field5->name = 'assigned_user_id';
@@ -119,6 +118,15 @@ $field7->displaytype= 2;
 $block1->addField($field7);
 /** END */
 
+$field8 = new Vtiger_Field();
+$field8->name = 'CustomerPO';
+$field8->table = 'vtiger_deliverynote';
+$field8->column = 'customerpo';
+$field8->columntype = 'VARCHAR(50)';
+$field8->helpinfo = 'Customer PO value or customer reference';
+$field8->uitype = 2;
+$field8->typeofdata = 'V~O';
+$block1->addField($field8);
 // Create default custom filter (mandatory)
 $filter1 = new Vtiger_Filter();
 $filter1->name = 'All';

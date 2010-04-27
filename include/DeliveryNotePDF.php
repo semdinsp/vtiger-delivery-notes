@@ -18,6 +18,7 @@ function get_do_pdf() {
 	require_once('include/database/PearDatabase.php');
 	require_once('modules/Deliverynote/Deliverynote.php');
 	require_once('modules/Invoice/Invoice.php');
+	require_once('modules/SalesOrder/SalesOrder.php');
 	require_once('modules/Deliverynote/language/en_us.lang.php');
 	global $adb,$app_strings,$current_user, $mod_strings;
 
@@ -36,11 +37,12 @@ function get_do_pdf() {
    // scott Print_r($focus->column_fields);
    
 	$productlist = $focus->column_fields["ProductList"];
+	$customerpo = $focus->column_fields["CustomerPO"];
 
 	$inv_no = $focus->column_fields['LinkTo'];
 // scott	Print($productlist);
-	$focus = new Invoice();
-	$focus->retrieve_entity_info($inv_no,"Invoice");
+	$focus = new SalesOrder();
+	$focus->retrieve_entity_info($inv_no,"SalesOrder");
 //scott	Print_r($focus);
 	
 	$sql="select currency_symbol from vtiger_currency_info where id=?";

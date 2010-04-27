@@ -2,6 +2,9 @@
 A vtiger module for creating delivery notes.  Delivery notes or delivery orders are documents which the customer signs to acknowledge delivery of the product.
 The delivery order is driven from the linked invoice.  A comma separated list of products can be chosen. This allows you to add have a delivery order for just some of the products or all of the products.
 
+== Customer Demand
+The customer has demanded that it be linked to the sales order so that after delivery the invoice can be prepared. 
+
 
 
 

@@ -28,7 +28,7 @@ $pdf->addDescBlock($description, $mod_strings["Description"], $descBlock);
 /* **************** Begin Terms ****************** */
 $stampBlock=array("107",$top,"53", $num);
 //scott $pdf->addDescBlock($conditions, $app_strings["DOTerms"], $termBlock);
-$pdf->addDescBlock("Chop with company stamp and sign here:", $mod_strings["DOStamp"], $stampBlock);
+$pdf->addDescBlock("\n\n\n\n\n\n\n\nChop with company stamp and sign here:", $mod_strings["DOStamp"], $stampBlock);
 
 /* ************** End Terms *********************** */
 

@@ -31,17 +31,17 @@ $pdf->addTextBlock( $org_name, $companyText ,$companyBlockPositions );
 
 // ************* Begin Top-Right Header ***************
 // title
-$titleBlock=array("147","7");
-$pdf->title( $app_strings["Delivery Order"],"", $titleBlock );
+$titleBlock=array("114","3","67");
+$pdf->addBubbleBlock( $account_name,$mod_strings["Delivery Order"], $titleBlock );
+$downdistance="21";
+$soBubble=array("168",$downdistance,"12");
+$pdf->addBubbleBlock($customerpo, $mod_strings["Customer Ref"], $soBubble);
 
-$soBubble=array("168","17","12");
-$pdf->addBubbleBlock($so_name, $app_strings["Job Number"], $soBubble);
-
-$poBubble=array("114","17","12");
+$poBubble=array("114",$downdistance,"12");
 $pdf->addBubbleBlock($po_name, $mod_strings["Delivery Order"], $poBubble);
 
 // page number
-$pageBubble=array("147","17",0);
+$pageBubble=array("147",$downdistance,0);
 $pdf->addBubbleBlock($page_num, $app_strings["Page"], $pageBubble);
 // ************** End Top-Right Header *****************
 
@@ -49,7 +49,7 @@ $pdf->addBubbleBlock($page_num, $app_strings["Page"], $pageBubble);
 
 // ************** Begin Addresses **************
 // shipping Address
-$shipLocation = array("147","40","61");
+$shipLocation = array("114","40","61");
 if(trim($ship_street)!='')
 	$shipText = $ship_street."\n";
 if(trim($ship_city) !='')
@@ -78,11 +78,11 @@ if(trim($bill_state)!='' || trim($bill_code)!= '')
 
 /*  ******** Begin Invoice Data ************************ */ 
 // terms block
-$termBlock=array("10","47");
-$pdf->addRecBlock($account_name, $app_strings["Customer Name"], $termBlock);
+//$termBlock=array("147","40");
+//$pdf->addRecBlock($account_name, $app_strings["Customer Name"], $termBlock);
 
 // issue date block
-$issueBlock=array("80","37");
+$issueBlock=array("10","47");
 $pdf->addRecBlock(getDisplayDate(date("Y-m-d")), $mod_strings["Issue Date"],$issueBlock);
 
 // due date block
