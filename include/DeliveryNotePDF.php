@@ -38,6 +38,7 @@ function get_do_pdf() {
    
 	$productlist = $focus->column_fields["ProductList"];
 	$customerpo = $focus->column_fields["CustomerPO"];
+	$dn_number = $focus->column_fields["dn_sequence"];
 
 	$inv_no = $focus->column_fields['LinkTo'];
 // scott	Print($productlist);

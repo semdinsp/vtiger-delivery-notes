@@ -42,7 +42,7 @@ $space=array("4"=>"191","5"=>"189","6"=>"187","7"=>"186","8"=>"184","9"=>"182","
 
 
 
- $pdf->addCols( $cols,$prodTable,$bottom, $focus->column_fields["hdnTaxType"]);
+$pdf->addCols( $cols,$prodTable,$bottom, $focus->column_fields["hdnTaxType"]);
 $pdf->addLineFormat( $colsAlign);
 
 /* ************** End Table Setup *********************** */

@@ -38,7 +38,7 @@ $soBubble=array("168",$downdistance,"12");
 $pdf->addBubbleBlock($customerpo, $mod_strings["Customer Ref"], $soBubble);
 
 $poBubble=array("114",$downdistance,"12");
-$pdf->addBubbleBlock($po_name, $mod_strings["Delivery Order"], $poBubble);
+$pdf->addBubbleBlock($dn_number, $mod_strings["Delivery Order"], $poBubble);
 
 // page number
 $pageBubble=array("147",$downdistance,0);

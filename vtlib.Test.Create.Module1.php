@@ -49,7 +49,7 @@ $field1->table = $module->basetable;
 $field1->column = 'deliverynotename';
 $field1->columntype = 'VARCHAR(255)';
 $field1->uitype = 2;
-$field1->typeofdata = 'V~M';
+$field1->typeofdata = 'V~O';
 $block1->addField($field1); /** Creates the field and adds to block */
 
 // Set at-least one field to identifier of module record
@@ -83,7 +83,7 @@ $field4->column = 'linkto';
 $field4->columntype = 'VARCHAR(100)';
 $field4->uitype = 10;
 $field4->typeofdata = 'V~M';
-$field4->helpinfo = 'Related to an existing invoice';
+$field4->helpinfo = 'Related to an existing sales order';
 $block1->addField($field4);
 $field4->setRelatedModules(Array('SalesOrder'));
 /** Invoice */
@@ -127,6 +127,18 @@ $field8->helpinfo = 'Customer PO value or customer reference';
 $field8->uitype = 2;
 $field8->typeofdata = 'V~O';
 $block1->addField($field8);
+$field9 = new Vtiger_Field();
+$field9->name = 'dn_sequence'; //Sequencial
+$field9->label = 'Delivery Note Number';
+$field9->table = 'vtiger_deliverynote'; //$module->basetable;
+$field9->column = 'dn_sequence';
+$field9->columntype = 'VARCHAR(100)';
+$field9->uitype = 4;
+$field9->typeofdata = 'V~O';
+$block1->addField($field9);
+// following for auto gen on save
+$entity_tmp = new CRMEntity();
+$entity_tmp->setModuleSeqNumber("configure",$module->name,"DN",1);
 // Create default custom filter (mandatory)
 $filter1 = new Vtiger_Filter();
 $filter1->name = 'All';
@@ -153,6 +165,7 @@ $module->setRelatedList(Vtiger_Module::getInstance('Accounts'), 'Accounts', Arra
 /*$module->setRelatedList(Vtiger_Module::getInstance('SalesOrder'), 'SalesOrder', Array('ADD','SELECT')); */
 /** Set sharing access of this module */
 $module->setDefaultSharing('Public_ReadWriteDelete'); 
+
 
 /** Enable and Disable available tools */
 $module->enableTools(Array('Import', 'Export'));
