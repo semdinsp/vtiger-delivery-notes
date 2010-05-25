@@ -20,9 +20,11 @@ $pdf->addImage( $logo_name, $imageBlock);
 // x,y,width
 if($org_phone != '')
   $phone ="\n".$app_strings["Phone"].":".$org_phone;
+if($org_fax != '')
+  $fax =$app_strings["Fax"].":".$org_phone;
 	
 $companyBlockPositions=array( "10","23","62" );
-$companyText=$org_address."\n".$org_city.", ".$org_state." ".$org_code." ".$org_country." ".$phone."\n".$org_website;
+$companyText=$org_address."\n".$org_city.", ".$org_state." ".$org_code." ".$org_country." ".$phone." ".$fax."\n".$org_website;
 $pdf->addTextBlock( $org_name, $companyText ,$companyBlockPositions );
 
 // ************** End company information *******************
@@ -31,27 +33,32 @@ $pdf->addTextBlock( $org_name, $companyText ,$companyBlockPositions );
 
 // ************* Begin Top-Right Header ***************
 // title
-$titleBlock=array("114","3","67");
-$pdf->addBubbleBlock( $account_name,$mod_strings["Delivery Order"], $titleBlock );
-$downdistance="21";
-$soBubble=array("168",$downdistance,"12");
+$titleBlock=array("140","3","67");
+//scott orig $pdf->addBubbleBlock( "",$mod_strings["Delivery Order"], $titleBlock );
+$pdf->addTextBlock($mod_strings["Delivery Order"],"", $titleBlock ,$default_font,24);
+$downdistance="12";
+$soBubble=array("172",$downdistance,"9");
 $pdf->addBubbleBlock($customerpo, $mod_strings["Customer Ref"], $soBubble);
 
-$poBubble=array("114",$downdistance,"12");
-$pdf->addBubbleBlock($dn_number, $mod_strings["Delivery Order"], $poBubble);
+$poBubble=array("114",$downdistance,"10");
+$pdf->addBubbleBlock($dn_number, $mod_strings["Delivery Number"], $poBubble);
 
+$pageBubble=array("143",$downdistance,"9");
+$pdf->addBubbleBlock($job_number, $mod_strings["Job no"], $pageBubble);
 // page number
-$pageBubble=array("147",$downdistance,0);
-$pdf->addBubbleBlock($page_num, $app_strings["Page"], $pageBubble);
+//scott $pageBubble=array("147",$downdistance,0);
+// scott $pdf->addBubbleBlock($page_num, $app_strings["Page"], $pageBubble);
 // ************** End Top-Right Header *****************
 
 
 
 // ************** Begin Addresses **************
 // shipping Address
-$shipLocation = array("114","40","61");
+$shipLocation = array("114","30","61");
+if(trim($account_name)!='')
+	$shipText = $account_name."\n";
 if(trim($ship_street)!='')
-	$shipText = $ship_street."\n";
+	$shipText .= $ship_street."\n";
 if(trim($ship_city) !='')
 	$shipText .= $ship_city.", ";
 if(trim($ship_state)!='' || trim($ship_code)!= '')
@@ -83,7 +90,7 @@ if(trim($bill_state)!='' || trim($bill_code)!= '')
 
 // issue date block
 $issueBlock=array("10","47");
-$pdf->addRecBlock(getDisplayDate(date("Y-m-d")), $mod_strings["Issue Date"],$issueBlock);
+$pdf->addRecBlock(getDisplayDate(date("d-m-Y")), $mod_strings["Issue Date"],$issueBlock);
 
 // due date block
 //scott $dueBlock=array("81","52");

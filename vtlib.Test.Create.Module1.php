@@ -161,7 +161,7 @@ $filter2->addField($field2, 1);
 $filter2->addRule($field1, 'CONTAINS', 'Test');
 
 /** Associate other modules to this module */
-$module->setRelatedList(Vtiger_Module::getInstance('Accounts'), 'Accounts', Array('ADD','SELECT'));
+$module->setRelatedList(Vtiger_Module::getInstance('SalesOrder'), 'SalesOrder', Array('ADD','SELECT'));
 /*$module->setRelatedList(Vtiger_Module::getInstance('SalesOrder'), 'SalesOrder', Array('ADD','SELECT')); */
 /** Set sharing access of this module */
 $module->setDefaultSharing('Public_ReadWriteDelete'); 

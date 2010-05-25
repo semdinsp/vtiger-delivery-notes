@@ -16,11 +16,13 @@ $mod_strings = Array (
 'Created Time' => 'Created Time',
 'Modified Time' => 'Modified Time',
 'DeliverynoteName' => 'Delivery Note Name',
-'Delivery Order' => 'Delivery Note',
+'Delivery Order' => 'Delivery Order',
+'Delivery Number' => 'Delivery Order no',
 'Customer Ref' => 'Your Reference',
 'Job Number' => 'Job Number',
+'Job no' => 'Job no',
 'Issue Date' => 'Date',
-'Shipping Address' => 'Customer Address',
+'Shipping Address' => 'Customer Name and  Address',
 'Description' => 'Remarks',
 'DOStamp' => 'Goods Received in good order and condition.'
 );

@@ -5,6 +5,6 @@ $package = new Vtiger_Package();
 $package->export(
 Vtiger_Module::getInstance('Deliverynote'),
 'test/vtlib',
-'DeliveryOrder.zip',
+'Deliverynote.zip',
 true);
 ?>

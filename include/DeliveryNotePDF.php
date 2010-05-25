@@ -62,6 +62,8 @@ function get_do_pdf() {
 		$account_name = '';	
 	$po_name = $focus->column_fields["purchaseorder"];
 	$subject = $focus->column_fields["subject"];
+	//scott
+	$job_number = $focus->column_fields["subject"];
 	
 	$valid_till = $focus->column_fields["duedate"];
 	$valid_till = getDisplayDate($valid_till);
@@ -214,7 +216,7 @@ function get_do_pdf() {
 			$price_salestax += $total_taxes;
 		}
 		$prod_total[$i] = number_format($producttotal,2,'.',',');
-	
+		$product_line[$j]["Count"] = $i.".";
 		$product_line[$j]["Product Code"] = $product_code[$i];
 		$product_line[$j]["Qty"] = $qty[$i];
 	    $product_line[$j]["Units"] = "test"; //scott $qty[$i];

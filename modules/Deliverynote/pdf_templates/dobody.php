@@ -26,11 +26,13 @@ $space=array("4"=>"191","5"=>"189","6"=>"187","7"=>"186","8"=>"184","9"=>"182","
 	$colsAlign["Product Name"] = "L";
 	$colsAlign["Description"] = "L";
 	$colsAlign["Qty"] = "R";
+	$colsAlign["Count"] = "L";
 //    $colsAlign["Units"] = "R";
 //scott 	$colsAlign["Price"] = "R";
 //scott 	$colsAlign["Discount"] = "R";
 //scott //scott 	$colsAlign["Tax"] = "R";
 //scott 	$colsAlign["Total"] = "R";
+$cols["Count"] = "10";
 	$cols["Product Code"] = "40";
 	$cols["Product Name"] = "115";
 	$cols["Qty"] = "25";
