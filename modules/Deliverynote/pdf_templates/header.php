@@ -33,9 +33,13 @@ $pdf->addTextBlock( $org_name, $companyText ,$companyBlockPositions );
 
 // ************* Begin Top-Right Header ***************
 // title
-$titleBlock=array("140","3","67");
+$titleBlock=array("130","3","47");
 //scott orig $pdf->addBubbleBlock( "",$mod_strings["Delivery Order"], $titleBlock );
-$pdf->addTextBlock($mod_strings["Delivery Order"],"", $titleBlock ,$default_font,24);
+//pdf=addTitleTextBlock($pdf,$mod_strings["Delivery Order"], $titleBlock );
+   $pdf->SetXY( $titleBlock[0], $titleBlock[1]);
+    $pdf->SetFont( "Helvetica", "B", 22);
+   $pdf->Cell( $titleBlock[2], 4,$mod_strings["Delivery Order"]);
+    $pdf->SetFont( "Helvetica", "", 10);
 $downdistance="12";
 $soBubble=array("172",$downdistance,"9");
 $pdf->addBubbleBlock($customerpo, $mod_strings["Customer Ref"], $soBubble);
@@ -43,8 +47,8 @@ $pdf->addBubbleBlock($customerpo, $mod_strings["Customer Ref"], $soBubble);
 $poBubble=array("114",$downdistance,"10");
 $pdf->addBubbleBlock($dn_number, $mod_strings["Delivery Number"], $poBubble);
 
-$pageBubble=array("143",$downdistance,"9");
-$pdf->addBubbleBlock($job_number, $mod_strings["Job no"], $pageBubble);
+$jobBubble=array("143",$downdistance,"9");
+$pdf->addBubbleBlock($job_number, $mod_strings["Job no"], $jobBubble);
 // page number
 //scott $pageBubble=array("147",$downdistance,0);
 // scott $pdf->addBubbleBlock($page_num, $app_strings["Page"], $pageBubble);

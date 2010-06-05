@@ -11,6 +11,18 @@
 /**
  * Function to generate DeliveryOrder pdf
  */
+/* SCOTT BROKEN function addTitleTextBlock($pd, $title,$positions )   
+{
+        $r1  = $positions[0];
+        $y1  = $positions[1];
+        $pd->SetXY( $r1, $y1);
+        $pd->SetFont( "Helvetica", "B", 24);
+        $pd->Cell( $positions[2], 4,$title);
+        $pd->SetFont( "Helvetica", "", 10); 
+$pd
+}  */
+
+
 function get_do_pdf() {
 	
 	require_once('include/tcpdf/pdf.php');
@@ -113,7 +125,7 @@ function get_do_pdf() {
 	
 	//get the Associated Products for this Invoice
 	$focus->id = $focus->column_fields["record_id"];
-	$associated_products = getAssociatedProducts("Invoice",$focus);
+	$associated_products = getAssociatedProducts("SalesOrder",$focus);
 	$num_products = count($associated_products);
 	
 	//This $final_details array will contain the final total, discount, Group Tax, S&H charge, S&H taxes and adjustment

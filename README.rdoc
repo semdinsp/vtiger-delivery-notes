@@ -24,3 +24,7 @@ Click on the install link to install the module
 Your vtiger site is located at vtigerurl.
 Then click the link  http://vtigerurl/vtlib.Test.html
 Click on the delete link to delete the module
+
+== Compilation//Installation shortcuts
+tar cfz ../deliverynote.tar.gz .; scp -i ../../aws/xxx ../deliverynote.tar.gz ubuntu@xxxx.com:/mnt/tmp
+sudo tar xfz /mnt/tmp/deliverynote.tar.gz ; sudo chown -R www-data:www-data .

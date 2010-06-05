@@ -4,7 +4,8 @@
 $waterMarkPositions=array("30","180");
 // this is the rotate amount (todo)
 $waterMarkRotate=array("45","50","180");
-$pdf->watermark( $status, $waterMarkPositions, $waterMarkRotate );
+# scott customer does not want watermark
+# $pdf->watermark( $status, $waterMarkPositions, $waterMarkRotate );
 
 include("include/tcpdf/pdfconfig.php");
 
