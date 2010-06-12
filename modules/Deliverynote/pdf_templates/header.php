@@ -68,7 +68,7 @@ if(trim($ship_city) !='')
 if(trim($ship_state)!='' || trim($ship_code)!= '')
 	$shipText .= $ship_state." ".$ship_code."\n";
 
-	$shipText .=$ship_country;
+	$shipText .=$ship_country."\nAttn: ".$contact_name."\n".$contact_phone."\n";
 
 $pdf->addTextBlock( $mod_strings["Shipping Address"].":", $shipText, $shipLocation );
 

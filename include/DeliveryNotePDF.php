@@ -21,6 +21,30 @@
         $pd->SetFont( "Helvetica", "", 10); 
 $pd
 }  */
+function getContactPhone($contact_id)
+{
+      require_once('include/utils/utils.php'); //new
+	  require_once('include/utils/RecurringType.php');
+	
+        global $log;
+        $log->debug("Entering getContactPhone(".$contact_id.") method ...");
+        $log->info("in getContactPhone ".$contact_id);
+
+        global $adb, $current_user;
+        $contact_phone = '';
+        if($contact_id != '')
+        {
+                $sql = "select * from vtiger_contactdetails where contactid=?";
+                $result = $adb->pquery($sql, array($contact_id));
+                $contact_phone .= "Phone: ";
+                $contact_phone .= $adb->query_result($result,0,"phone");
+                $contact_phone .= "\nMobile: ";
+                $contact_phone .= $adb->query_result($result,0,"mobile");
+               
+        }
+        $log->debug("Exiting getContactName method ...");
+        return $contact_phone;
+}
 
 
 function get_do_pdf() {
@@ -71,7 +95,13 @@ function get_do_pdf() {
  	if($focus->column_fields["account_id"] != '')
 		$account_name = getAccountName($focus->column_fields["account_id"]);
 	else
-		$account_name = '';	
+		$account_name = '';
+    $contact_phone='';
+	if($focus->column_fields["contact_id"] != '') {
+		$contact_name = getContactName($focus->column_fields["contact_id"]);
+    	$contact_phone = getContactPhone($focus->column_fields["contact_id"]);  }
+	else
+		$contact_name = '';		
 	$po_name = $focus->column_fields["purchaseorder"];
 	$subject = $focus->column_fields["subject"];
 	//scott
