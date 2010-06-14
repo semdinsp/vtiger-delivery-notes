@@ -11,7 +11,7 @@ www.estormtech.com
 The customer has demanded that it be linked to the sales order so that after delivery the invoice can be prepared. 
 
 == Variables
-product list - a list of commma separated values starting from 1 which selects the products on the sales order - so that you can have separate delivery notes for a sales order
+product list - a list of commma separated values starting from 1 which selects the products on the sales order - so that you can have separate delivery notes for a sales order.  Now updated so that if product list is blank you get all the products in the delivery note.
 customer reference - a reference value that customers can use ( for example their PO (purchase order) number)
 remarks - the remarks portion comes from the description field on the sales order
 contact - from the linked contact on the sales order

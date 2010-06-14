@@ -218,6 +218,15 @@ function get_do_pdf() {
 	$lines = 0;
 	$prod_item= explode(",",$productlist) ;  //updated by scott
     $num_products = count($prod_item);   // updated by scott
+   if($productlist=='')   
+   {
+         	$num_products = count($associated_products); //if product list empty
+            for($k=1;$k<=$num_products;$k++)
+            {
+	          $prod_item[$k-1]=$k;
+	        }
+	  //	Print_r($prod_item);
+    }
 //	Print_r($prod_item);
 //	Print($num_products);
 	//This is to get all prodcut details as row basis
