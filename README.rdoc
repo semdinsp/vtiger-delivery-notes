@@ -13,7 +13,8 @@ The customer has demanded that it be linked to the sales order so that after del
 == Variables
 product list - a list of commma separated values starting from 1 which selects the products on the sales order - so that you can have separate delivery notes for a sales order
 customer reference - a reference value that customers can use ( for example their PO (purchase order) number)
-remarkds - the remarks portion comes from the description field on the sales order
+remarks - the remarks portion comes from the description field on the sales order
+contact - from the linked contact on the sales order
 
 
 
@@ -33,3 +34,6 @@ Click on the delete link to delete the module
 == Compilation//Installation shortcuts
 tar cfz ../deliverynote.tar.gz .; scp -i ../../aws/xxx ../deliverynote.tar.gz ubuntu@xxxx.com:/mnt/tmp
 sudo tar xfz /mnt/tmp/deliverynote.tar.gz ; sudo chown -R www-data:www-data .
+
+=== Strange Notes
+The vertical lines in the table are set up in addCols in include/tcpdf/pdf.php
