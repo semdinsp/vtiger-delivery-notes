@@ -16,7 +16,7 @@ define('EURO', chr(128) );
 $desc=explode("\n",$description);
 $cond=explode("\n",$conditions);
 $num=230;
-$desc2=$description."\n-- ";
+$desc2=$description."\n ";
 /* **************** Begin Description ****************** */
 $descBlock=array("10",$top,"53", $num);
 $pdf->addDescBlock($desc2, $mod_strings["Description"], $descBlock);

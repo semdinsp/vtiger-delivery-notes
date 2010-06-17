@@ -38,8 +38,8 @@ function getContactPhone($contact_id)
                 $result = $adb->pquery($sql, array($contact_id));
                 $contact_phone .= "Phone: ";
                 $contact_phone .= $adb->query_result($result,0,"phone");
-                $contact_phone .= "\nMobile: ";
-                $contact_phone .= $adb->query_result($result,0,"mobile");
+         // scott  not wanted     $contact_phone .= "\nMobile: ";
+        // scott        $contact_phone .= $adb->query_result($result,0,"mobile");
                
         }
         $log->debug("Exiting getContactName method ...");
