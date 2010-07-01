@@ -24,7 +24,7 @@ if($org_fax != '')
   $fax =$app_strings["Fax"].":".$org_phone;
 	
 $companyBlockPositions=array( "10","23","62" );
-$companyText=$org_address."\n".$org_city.", ".$org_state." ".$org_code." ".$org_country." ".$phone." ".$fax."\n".$org_website;
+$companyText=$org_address."\n".$org_city.", ".$org_state." ".$org_code." ".$phone." ".$fax."\n".$org_website;
 $pdf->addTextBlock( $org_name, $companyText ,$companyBlockPositions );
 
 // ************** End company information *******************
@@ -94,7 +94,7 @@ if(trim($bill_state)!='' || trim($bill_code)!= '')
 
 // issue date block
 $issueBlock=array("10","47");
-$pdf->addRecBlock(getDisplayDate(date("d/m/Y")), $mod_strings["Issue Date"],$issueBlock);
+$pdf->addRecBlock(getDisplayDate(date("d-m-Y")), $mod_strings["Issue Date"],$issueBlock);
 
 // due date block
 //scott $dueBlock=array("81","52");

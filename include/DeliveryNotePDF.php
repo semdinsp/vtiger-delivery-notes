@@ -280,7 +280,7 @@ function get_do_pdf() {
 
 		$prod_line[$j]=1;
 		for($count=0;$count<count($subproduct_name[$i]);$count++){
-			if($lines % 12!=0){
+			if($lines % 24!=0){
 				$product_line[$j]["Product Name"] .= "\n".decode_html($subproduct_name[$i][$count]);
 				$prod_line[$j]++;
 			}
@@ -315,13 +315,13 @@ function get_do_pdf() {
 	
 //	$num_pages=ceil(($num_products/$products_per_page));
 	//STARTS - Placement of products in pages as per the lines count
-	$lines_per_page = "12";
+	$lines_per_page = "24";
 	$prod_cnt=0;
 	$num_pages = ceil(($lines/$lines_per_page));
 	$tmp=0;
 	for($count=0;$count<$num_pages;$count++){
 		for($k=$tmp;$k<$j;$k++){
-			if($prod_cnt!=12){
+			if($prod_cnt!=24){
 				$products[$count][]= $k;
 				$prod_cnt += $prod_line[$k];
 			} else {
