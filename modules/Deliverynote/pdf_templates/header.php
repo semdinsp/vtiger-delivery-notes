@@ -21,7 +21,7 @@ $pdf->addImage( $logo_name, $imageBlock);
 if($org_phone != '')
   $phone ="\n".$app_strings["Phone"].":".$org_phone;
 if($org_fax != '')
-  $fax =$app_strings["Fax"].":".$org_phone;
+  $fax =$app_strings["Fax"].":".$org_fax;
 	
 $companyBlockPositions=array( "10","23","62" );
 $companyText=$org_address."\n".$org_city.", ".$org_state." ".$org_code." ".$phone." ".$fax."\n".$org_website;
