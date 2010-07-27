@@ -94,7 +94,7 @@ if(trim($bill_state)!='' || trim($bill_code)!= '')
 
 // issue date block
 $issueBlock=array("10","47");
-$pdf->addRecBlock(getDisplayDate(date("d-m-Y")), $mod_strings["Issue Date"],$issueBlock);
+$pdf->addRecBlock(getDisplayDate(date("Y-m-d")), $mod_strings["Issue Date"],$issueBlock);
 
 // due date block
 //scott $dueBlock=array("81","52");
