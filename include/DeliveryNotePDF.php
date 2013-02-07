@@ -108,7 +108,7 @@ function get_do_pdf() {
 	$job_number = $focus->column_fields["subject"];
 	
 	$valid_till = $focus->column_fields["duedate"];
-	$valid_till = getDisplayDate($valid_till);
+	$valid_till = getValidDisplayDate($valid_till);  
 	$bill_street = $focus->column_fields["bill_street"];
 	$bill_city = $focus->column_fields["bill_city"];
 	$bill_state = $focus->column_fields["bill_state"];

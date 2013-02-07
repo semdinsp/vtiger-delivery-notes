@@ -147,7 +147,7 @@ $module->addFilter($filter1);
 
 // Add fields to the filter created
 $filter1->addField($field1)->addField($field2, 1)->addField($field5, 2);
-
+ 
 // Create one more filter
 $filter2 = new Vtiger_Filter();
 $filter2->name = 'All2';
