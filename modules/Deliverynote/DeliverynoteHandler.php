@@ -15,6 +15,7 @@ class DeliverynoteHandler extends VTEventHandler {
 			// Entity is about to be saved, take required action
 		}
 
+
 		if($eventName == 'vtiger.entity.aftersave') {
 			// Entity has been saved, take next action
 		}

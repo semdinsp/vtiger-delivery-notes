@@ -86,12 +86,11 @@ if(trim($bill_state)!='' || trim($bill_code)!= '')
 // ********** End Addresses ******************
 
 
-
 /*  ******** Begin Invoice Data ************************ */ 
 // terms block
 //$termBlock=array("147","40");
 //$pdf->addRecBlock($account_name, $app_strings["Customer Name"], $termBlock);
-
+ 
 // issue date block
 $issueBlock=array("10","70");
 $pdf->addRecBlock(getValidDisplayDate(date("Y-m-d")), $mod_strings["Issue Date"],$issueBlock);

@@ -23,7 +23,7 @@ $prodTable=array("10","60");
 //contains the x angle starting point of the value field
 $space=array("4"=>"191","5"=>"189","6"=>"187","7"=>"186","8"=>"184","9"=>"182","10"=>"180","11"=>"179","12"=>"177","13"=>"175");
 //if taxtype is individual
-
+  
 	$colsAlign["Product Name"] = "L";
 	$colsAlign["Description"] = "L";
 	$colsAlign["Product Code"] = "C";

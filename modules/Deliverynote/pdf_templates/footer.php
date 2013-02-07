@@ -13,6 +13,7 @@
 define('USD',"$");
 define('EURO', chr(128) );
 
+
 $desc=explode("\n",$description);
 $cond=explode("\n",$conditions);
 $num=230;

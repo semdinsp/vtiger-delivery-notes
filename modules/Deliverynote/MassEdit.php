@@ -15,7 +15,7 @@ require_once('include/utils/utils.php');
 $focus = CRMEntity::getInstance($currentModule);
 $focus->mode = '';
 $mode = 'mass_edit';
-
+ 
 $disp_view = getView($focus->mode);
 $idstring = $_REQUEST['idstring'];
 

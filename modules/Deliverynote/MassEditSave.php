@@ -18,7 +18,7 @@ $return_action = 'index';
 
 //Added to fix 4600
 $url = getBasic_Advance_SearchURL();
-
+ 
 if(isset($_REQUEST['start']) && $_REQUEST['start']!=''){
 	$rstart = "&start=".vtlib_purify($_REQUEST['start']);
 }

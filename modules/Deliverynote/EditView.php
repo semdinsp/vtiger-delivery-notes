@@ -14,6 +14,7 @@ require_once('Smarty_setup.php');
 $focus = CRMEntity::getInstance($currentModule);
 $smarty = new vtigerCRM_Smarty();
 
+
 $category = getParentTab($currentModule);
 $record = $_REQUEST['record'];
 $isduplicate = vtlib_purify($_REQUEST['isDuplicate']);

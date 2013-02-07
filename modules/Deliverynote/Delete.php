@@ -9,7 +9,7 @@
  *************************************************************************************/
 global $currentModule;
 $focus = CRMEntity::getInstance($currentModule);
-
+ 
 $record = vtlib_purify($_REQUEST['record']);
 $module = vtlib_purify($_REQUEST['module']);
 $return_module = vtlib_purify($_REQUEST['return_module']);

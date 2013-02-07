@@ -40,7 +40,7 @@ if(trim($bill_city) !='')
 	$billText .= $bill_city.", ";
 if(trim($bill_state)!='' || trim($bill_code)!= '')
 	$billText .= $bill_state." ".$bill_code."\n";
-
+ 
 	$billText .=$bill_country;
 //scott $pdf->addTextBlock($app_strings["Billing Address"].":",$billText, $billPositions);
 

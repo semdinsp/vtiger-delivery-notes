@@ -94,7 +94,7 @@ function get_do_pdf() {
 		$quote_name = '';
  	if($focus->column_fields["account_id"] != '')
 		$account_name = getAccountName($focus->column_fields["account_id"]);
-	else
+	else 
 		$account_name = '';
     $contact_phone='';
 	if($focus->column_fields["contact_id"] != '') {

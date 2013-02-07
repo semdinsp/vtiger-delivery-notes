@@ -39,7 +39,7 @@ $imageBlock=array("15","95","8","8");
 $pdf->addImage( "sale.jpeg", $imageBlock);
 $imageBlock=array("185","95","8","8");
 $pdf->addImage( "sale.jpeg", $imageBlock);
-
+ 
 // descriptions that change sizes!
 $descc=count(explode("\n",$description));
 $condc=count(explode("\n",$conditions));

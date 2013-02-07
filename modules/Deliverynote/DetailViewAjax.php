@@ -13,6 +13,7 @@ $modObj = CRMEntity::getInstance($currentModule);
 $ajaxaction = $_REQUEST["ajxaction"];
 if($ajaxaction == 'DETAILVIEW')
 {
+	
 	$crmid = $_REQUEST['recordid'];
 	$tablename = $_REQUEST['tableName'];
 	$fieldname = $_REQUEST['fldName'];

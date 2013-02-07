@@ -18,6 +18,7 @@ $parenttab         = getParentTab();
 $forCRMRecord = vtlib_purify($_REQUEST['parentid']);
 $mode = $_REQUEST['mode'];
 
+
 if($singlepane_view == 'true')
 	$action = "DetailView";
 else

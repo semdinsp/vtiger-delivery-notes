@@ -14,7 +14,7 @@ require_once("modules/$currentModule/$currentModule.php");
 
 $focus = new $currentModule();
 setObjectValuesFromRequest($focus);
-
+ 
 $mode = $_REQUEST['mode'];
 $record=$_REQUEST['record'];
 if($mode) $focus->mode = $mode;

@@ -27,4 +27,5 @@ $mod_strings = Array (
 'DOStamp' => 'Goods Received in good order and condition.'
 );
 
+
 ?>
